@@ -16,7 +16,7 @@ class AddTodo extends Component {
     }
 
     handleClick=()=>{
-        this.props.addTodo(this.props.text)
+        this.props.addTodo(this.state.text)
     }
 }
 

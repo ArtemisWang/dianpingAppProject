@@ -12,11 +12,11 @@ class AddTodo extends Component {
     }
 
     handleChange=(e)=>{
-        this.props.setTodo(e.target.value)
+        
     }
 
     handleClick=()=>{
-        this.props.addTodo(this.props.text)
+        this.props.addTodo(this.state.text)
     }
 }
 
