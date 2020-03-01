@@ -4,7 +4,7 @@ export const getFilter=(state)=>state.filter
 
 export const getVidibleTodos=(state)=>{
     const {todos:{data},filter}=state
-    // console.log('getVidibleTodos')
+    console.log('getVidibleTodos')
     switch(filter){
         case 'all':
             return data
