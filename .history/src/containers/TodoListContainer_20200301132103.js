@@ -1,6 +1,6 @@
 import {connect} from 'react-redux'
 import TodoList from '../components/TodoList'
-import { toggleTodo,fetchTodos } from '../actions'
+import { toggleTodo } from '../actions'
 
 const getVidibleTodos=(todos, filter)=>{
     switch(filter){
@@ -20,8 +20,7 @@ const mapStateToProps=(state)=>({
 })
 
 const mapDispatchToProps=(dispatch)=>({
-    toggleTodo: id=>dispatch(toggleTodo(id)),
-    fetchTodos: ()=>dispatch(fetchTodos())
+    toggleTodo: id=>dispatch(toggleTodo(id))
 })
 
 // 连接react组件--TodoList和Redux

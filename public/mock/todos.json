@@ -1,0 +1,5 @@
+[
+    {"id":1,"text":"起床","completed":true},
+    {"id":2,"text":"洗脸","completed":false},
+    {"id":3,"text":"刷牙","completed":false}
+]

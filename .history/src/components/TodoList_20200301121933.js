@@ -3,10 +3,6 @@ import store from '../store/'
 
 class TodoList extends Component {
 
-    componentDidMount(){
-        this.props.fetchTodos()
-    }
-
     render() {
         const {todos,toggleTodo}=this.props
         console.log('todo有改动：',store.getState())

@@ -18,23 +18,16 @@ const reducer=(state=initialState,action)=>{
             return {
                 ...state,
                 isFetching:false,
-                data:action.data
-            }
-        case FETCH_TODOS_FAILURE:
-            return {
-                ...state,
-                isFetching:false,
-                error:action.error
-            }
-        default:
-            return {
-                ...state,
-                data:todos(state.data,action)
+                data
             }
     }
 }
 
-const todos=(state=[],action)=>{
+const todos=(state=[
+    {id:1,text:'起床',completed:true},
+    {id:2,text:'洗脸',completed:false},
+    {id:3,text:'做饭',completed:false},
+],action)=>{
     switch(action.type){
         case ADD_TODO:
             return [
@@ -59,4 +52,4 @@ const todos=(state=[],action)=>{
         
 }
 
-export default reducer
+export default todos

@@ -34,7 +34,11 @@ const reducer=(state=initialState,action)=>{
     }
 }
 
-const todos=(state=[],action)=>{
+const todos=(state=[
+    {id:1,text:'起床',completed:true},
+    {id:2,text:'洗脸',completed:false},
+    {id:3,text:'做饭',completed:false},
+],action)=>{
     switch(action.type){
         case ADD_TODO:
             return [

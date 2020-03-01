@@ -11,12 +11,11 @@ const fetchTodosSuccess=(data)=>({
 })
 
 const fetchTodosFailure=(error)=>({
-    type:FETCH_TODOS_FAILURE,
-    error
+    type:FETCH_TODOS_FAILURE,error
 })
 
 export const fetchTodos=()=>{
-    return ((dispatch)=>{
+    return (dispatch)=>{
         dispatch(fetchTodosRequest())
         return fetch('./mock/todos.json').then(
             response=>{
@@ -29,7 +28,7 @@ export const fetchTodos=()=>{
                 console.log('An error occurred'+error)
             }
         )
-    })
+    }
 }
 
 export const addTodo=(text)=>({

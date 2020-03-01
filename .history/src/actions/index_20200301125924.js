@@ -11,8 +11,7 @@ const fetchTodosSuccess=(data)=>({
 })
 
 const fetchTodosFailure=(error)=>({
-    type:FETCH_TODOS_FAILURE,
-    error
+    type:FETCH_TODOS_FAILURE,error
 })
 
 export const fetchTodos=()=>{

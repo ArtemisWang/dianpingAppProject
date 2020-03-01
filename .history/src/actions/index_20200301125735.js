@@ -1,22 +1,20 @@
 import {SET_FILTER,SET_TODO,TOGGLE_TODO,ADD_TODO,FETCH_TODOS_FAILURE,FETCH_TODOS_REQUEST,FETCH_TODOS_SUCCESS} from './actionTypes'
 var nextTodoId=4
 
-const fetchTodosRequest=()=>({
+export const fetchTodosRequest=()=>({
     type:FETCH_TODOS_REQUEST
 })
 
-const fetchTodosSuccess=(data)=>({
-    type:FETCH_TODOS_SUCCESS,
-    data
+export const fetchTodosSuccess=()=>({
+    type:FETCH_TODOS_SUCCESS
 })
 
-const fetchTodosFailure=(error)=>({
-    type:FETCH_TODOS_FAILURE,
-    error
+export const fetchTodosFailure=()=>({
+    type:FETCH_TODOS_FAILURE
 })
 
 export const fetchTodos=()=>{
-    return ((dispatch)=>{
+    return (dispatch)=>{
         dispatch(fetchTodosRequest())
         return fetch('./mock/todos.json').then(
             response=>{
@@ -29,7 +27,7 @@ export const fetchTodos=()=>{
                 console.log('An error occurred'+error)
             }
         )
-    })
+    }
 }
 
 export const addTodo=(text)=>({
