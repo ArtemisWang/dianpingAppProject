@@ -5,7 +5,7 @@ import {getVidibleTodos} from '../selectors'
  
 
 const mapStateToProps=(state)=>({
-    todos:getVidibleTodos(state)
+    todos:getVidibleTodos(state.todos.data,state.filter)
 })
 
 const mapDispatchToProps=(dispatch)=>({

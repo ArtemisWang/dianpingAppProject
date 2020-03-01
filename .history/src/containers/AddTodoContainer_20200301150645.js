@@ -4,7 +4,7 @@ import { setTodo, addTodo } from '../actions'
 import {getText} from '../selectors'
 
 const mapStateToProps=state=>({
-    text:getText(state)
+    text:state.text
 })
 
 const mapDispatchToProps=dispatch=>({
